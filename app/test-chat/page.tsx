@@ -24,7 +24,7 @@ export default function TestChat() {
       
       const data = await res.json()
       setResponse(JSON.stringify(data, null, 2))
-    } catch (error) {
+    } catch (error: any) {
       setResponse('Error: ' + error.message)
     } finally {
       setLoading(false)
