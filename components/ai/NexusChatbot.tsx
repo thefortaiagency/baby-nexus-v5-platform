@@ -67,7 +67,7 @@ export default function NexusChatbot() {
       const assistantMessage: Message = {
         id: Date.now().toString(),
         role: 'assistant',
-        content: data.content,
+        content: data.message || data.content,
         timestamp: new Date()
       }
 
