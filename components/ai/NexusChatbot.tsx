@@ -46,6 +46,8 @@ export default function NexusChatbot() {
     setInput('')
     setIsLoading(true)
 
+    console.log('Sending message to API:', userMessage.content)
+
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
@@ -63,11 +65,12 @@ export default function NexusChatbot() {
       if (!response.ok) throw new Error('Failed to get response')
 
       const data = await response.json()
+      console.log('Received response:', data)
 
       const assistantMessage: Message = {
         id: Date.now().toString(),
         role: 'assistant',
-        content: data.message || data.content,
+        content: data.message || data.content || 'No response',
         timestamp: new Date()
       }
 
