@@ -1,4 +1,13 @@
+# Baby NEXUS V5 Platform
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Live URLs
+- Production: https://baby-nexus-v5-platform.vercel.app
+- Custom Domain: baby-nexus-v5.thefortaiagency.ai (DNS pending)
+
+## Auto-Deployment Test
+GitHub is now connected to Vercel for automatic deployments!
 
 ## Getting Started
 
