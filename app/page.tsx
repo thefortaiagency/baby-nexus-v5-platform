@@ -1,18 +1,8 @@
 'use client'
 
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { ArrowRight, Sparkles, Zap, Shield, Globe } from 'lucide-react'
-
-// Dynamic import to avoid SSR issues
-const NexusChatbot = dynamic(() => import('@/components/ai/NexusChatbot'), {
-  ssr: false,
-  loading: () => (
-    <div className="h-[600px] bg-gradient-to-b from-purple-900/20 to-blue-900/20 rounded-lg backdrop-blur-md border border-purple-500/20 flex items-center justify-center">
-      <div className="text-purple-300">Loading AI Assistant...</div>
-    </div>
-  )
-})
+import NexusChatbot from '@/components/ai/NexusChatbot'
 
 export default function Home() {
   return (
